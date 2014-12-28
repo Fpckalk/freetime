@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Free Time</title>
+
+	<!-- Thanks for the delivery D3! -->
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+	
+	<script>
+		var w = 600,
+			h = 250;
+
+		var svg = d3.selectAll('body')
+					.append('svg')
+					.attr('width', w)
+					.attr('height', h);
+
+		d3.csv('dataset.csv', function(error, data) {
+			console.log(error);
+			console.log(data);
+		})
+	</script>
+
+</body>
+</html>
